@@ -1,6 +1,16 @@
+:root {
+  --bg: #ccfbf1;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   line-height: calc(1em + 0.5rem);
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--bg);
 }
