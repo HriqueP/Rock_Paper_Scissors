@@ -1,13 +1,9 @@
 :root {
-  --bg: #ccfbf1;
-}
+  --bg: #ecfeff;
 
-body {
-  background-color: var(--bg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  --borders: #252525;
+
+  --option-bg: #252525;
 }
 
 * {
@@ -19,6 +15,24 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button {
+  background-color: #164e63;
+  padding: 0.25em 1.25em;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  font-weight: 600;
+  color: aliceblue;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -27,36 +41,80 @@ body {
   padding: 20px;
   gap: 20px;
   overflow: hidden;
-  border: 2px solid blue;
 }
 
-.turns {
-  border: 2px solid red;
+/* INSTRUCTION  TITLE */
+.instruction-title {
+  padding: 10px;
+  border: 3px solid var(--borders);
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
 }
 
+/* GAME */
 .game {
+  background-color: #06b6d4;
   flex: 1;
-  border: 2px solid green;
+  border: 3px solid var(--borders);
+  border-radius: 10px;
+  font-weight: 600;
+}
+.game-start {
+  display: flex; /* flex */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+.game-player {
+  display: none; /* none */
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  position: relative;
+}
+.game-player span {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 1.2em;
+}
+.line {
+  display: none;
 }
 
+/* OPTIONS */
 .options {
-  border: 2px solid orangered;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.option-icon {
+  background-color: var(--option-bg);
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 /* Mobile */
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 320px) {
 }
 
 /* Laptop */
 @media screen and (min-width: 1024px) {
-  /* body {
-    background-color: red;
-  } */
+  body {
+    background-color: bisque;
+  }
 }
 
-/* Laptop */
+/* Normal */
 @media screen and (min-width: 1440px) {
-  /* body {
-    background-color: blue;
-  } */
+  body {
+    background-color: cornflowerblue;
+  }
 }

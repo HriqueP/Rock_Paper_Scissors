@@ -32,9 +32,34 @@
   </head>
   <body>
     <div class="container">
-      <div class="turns">Turns</div>
-      <div class="game">Game</div>
-      <div class="options">Options</div>
+      <div class="instruction-title">
+        <p>First To 5 Wins!</p>
+      </div>
+
+      <div class="game">
+        <div class="game-start">
+          <h2>Start Game</h2>
+          <button id="button-start" onclick="startGame()">Start</button>
+        </div>
+
+        <div class="game-player opponent">
+          <span class="opponent-score">0</span>
+          <p class="opponent-choice">Opponent is Choosing...</p>
+        </div>
+        <hr class="line" />
+        <div class="game-player player">
+          <span class="player-score">0</span>
+          <p class="player-choice">Choose your Move ...</p>
+        </div>
+      </div>
+
+      <div class="options">
+        <p id="rock" class="option-icon">👊</p>
+        <p id="paper" class="option-icon">📄</p>
+        <p id="scissors" class="option-icon">✂️</p>
+      </div>
+
+      <!-- <button id="teste">Array</button> -->
     </div>
 
     <!-- Bootstrap JS -->
