@@ -27,6 +27,7 @@ body {
   padding: 20px;
   gap: 20px;
   overflow: hidden;
+  border: 2px solid blue;
 }
 
 .turns {
@@ -34,11 +35,12 @@ body {
 }
 
 .game {
-  border: 2px solid red;
+  flex: 1;
+  border: 2px solid green;
 }
 
 .options {
-  border: 2px solid red;
+  border: 2px solid orangered;
 }
 
 /* Mobile */
