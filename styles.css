@@ -33,6 +33,12 @@ button {
   font-weight: 600;
   color: aliceblue;
 }
+button:hover {
+  cursor: pointer;
+}
+.options:hover {
+  cursor: pointer;
+}
 
 .container {
   display: flex;
