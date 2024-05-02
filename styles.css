@@ -1,5 +1,6 @@
 :root {
   --bg: #ecfeff;
+  --bg-modal: #0ea4e9;
 
   --borders: #252525;
 
@@ -61,19 +62,19 @@ button {
   font-weight: 600;
 }
 .game-start {
-  display: flex; /* flex */
+  position: relative;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100%;
-  position: relative;
 }
 .game-player {
-  display: none; /* none */
+  position: relative;
+  display: none;
   justify-content: center;
   align-items: center;
   height: 50%;
-  position: relative;
 }
 .game-player span {
   position: absolute;
@@ -101,6 +102,26 @@ button {
   border-radius: 10px;
 }
 
+/* MODAL NEW GAME */
+.modal-new-game {
+  background-color: var(--bg-modal);
+  position: absolute;
+  display: none; /* flex */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 100px;
+  gap: 5px;
+  padding: 20px;
+  border: 3px solid var(--borders);
+  border-radius: 10px;
+  color: var(--bg);
+  font-weight: 600;
+  opacity: 0;
+  z-index: 100;
+  transition: opacity 1s;
+}
 /* Mobile */
 @media screen and (min-width: 320px) {
 }

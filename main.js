@@ -17,6 +17,10 @@ const playerChoice = document.querySelector(".player-choice");
 const opponentTotalScore = document.querySelector(".opponent-score");
 const playerTotalScore = document.querySelector(".player-score");
 
+// Const for modal
+const modal = document.querySelector(".modal-new-game");
+const gameWinner = document.querySelector(".text-game-winner");
+
 // Variables for the game
 const optionsArrays = ["👊", "📄", "✂️"];
 let started = false;
@@ -89,6 +93,19 @@ function opponentTurn() {
       options.forEach((element) => {
         element.style.pointerEvents = "none";
       });
+      if (playerScore == 5) {
+        openMewGameModal("You Win");
+        confetti({
+          startVelocity: 50,
+          gravity: 0.8,
+          origin: {
+            y: 1,
+          },
+        });
+      } else {
+        openMewGameModal("You Lose");
+        // window.location.reload();
+      }
     }
   }, 100);
 }
@@ -97,4 +114,18 @@ function opponentTurn() {
 function getRndInteger(min, max) {
   let randomNumber = Math.floor(Math.random() * (max - min)) + min;
   return randomNumber;
+}
+
+// Open modal
+function openMewGameModal(message) {
+  gameWinner.innerText = message;
+  modal.style.display = "flex";
+  setTimeout(() => {
+    modal.style.opacity = "1";
+  }, 500);
+}
+
+// Restart Game
+function restartGame() {
+  window.location.reload();
 }

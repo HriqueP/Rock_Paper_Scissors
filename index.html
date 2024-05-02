@@ -44,7 +44,7 @@
 
         <div class="game-player opponent">
           <span class="opponent-score">0</span>
-          <p class="opponent-choice">Opponent is Choosing...</p>
+          <p class="opponent-choice">Opponent is Choosing ...</p>
         </div>
         <hr class="line" />
         <div class="game-player player">
@@ -58,8 +58,11 @@
         <p id="paper" class="option-icon">📄</p>
         <p id="scissors" class="option-icon">✂️</p>
       </div>
+    </div>
 
-      <!-- <button id="teste">Array</button> -->
+    <div class="modal-new-game">
+      <p class="text-game-winner">Modal</p>
+      <button id="button-new-game" onclick="restartGame()">New Game</button>
     </div>
 
     <!-- Bootstrap JS -->
@@ -69,5 +72,6 @@
       crossorigin="anonymous"
     ></script> -->
     <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   </body>
 </html>
