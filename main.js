@@ -8,6 +8,7 @@ const scissors = document.getElementById("scissors");
 const panelGameStart = document.querySelector(".game-start");
 const panelGamePlay = document.querySelectorAll(".game-player");
 const line = document.querySelector(".line");
+const lineVertical = document.querySelector(".line-vertical");
 
 // Player and Opponents choices
 const opponentChoice = document.querySelector(".opponent-choice");
@@ -62,28 +63,40 @@ function opponentTurn() {
     opponentChoice.innerText = optionsArrays[getRndInteger(0, 3)];
 
     if (opponentChoice.innerText == playerChoice.innerText) {
+      setTimeout(() => {
+        playerChoice.style.fontSize = "1rem";
+        playerChoice.innerText = "Draw, go again...";
+        opponentChoice.style.fontSize = "1rem";
+        opponentChoice.innerText = "Draw, go again...";
+      }, 800);
       return;
     } else {
       switch (playerChoice.innerText) {
         case "👊":
           if (opponentChoice.innerText == "✂️") {
             playerTotalScore.innerText = playerScore += 1;
+            blink(playerTotalScore);
           } else {
             opponentTotalScore.innerText = opponentScore += 1;
+            blink(opponentTotalScore);
           }
           break;
         case "📄":
           if (opponentChoice.innerText == "👊") {
             playerTotalScore.innerText = playerScore += 1;
+            blink(playerTotalScore);
           } else {
             opponentTotalScore.innerText = opponentScore += 1;
+            blink(opponentTotalScore);
           }
           break;
         case "✂️":
           if (opponentChoice.innerText == "📄") {
             playerTotalScore.innerText = playerScore += 1;
+            blink(playerTotalScore);
           } else {
             opponentTotalScore.innerText = opponentScore += 1;
+            blink(opponentTotalScore);
           }
           break;
       }
@@ -93,6 +106,7 @@ function opponentTurn() {
       options.forEach((element) => {
         element.style.pointerEvents = "none";
       });
+
       if (playerScore == 5) {
         openMewGameModal("You Win");
         confetti({
@@ -102,12 +116,30 @@ function opponentTurn() {
             y: 1,
           },
         });
+        setTimeout(() => {
+          playerChoice.style.fontSize = "1rem";
+          playerChoice.innerText = "GG :)";
+          opponentChoice.style.fontSize = "1rem";
+          opponentChoice.innerText = "Good Game!";
+        }, 600);
       } else {
         openMewGameModal("You Lose");
-        // window.location.reload();
+        setTimeout(() => {
+          playerChoice.style.fontSize = "1rem";
+          playerChoice.innerText = "Damn...";
+          opponentChoice.style.fontSize = "1rem";
+          opponentChoice.innerText = "Maybe Next Time...";
+        }, 600);
       }
+    } else {
+      setTimeout(() => {
+        playerChoice.style.fontSize = "1rem";
+        playerChoice.innerText = "Choose your Move ...";
+        opponentChoice.style.fontSize = "1rem";
+        opponentChoice.innerText = "Opponent is Choosing ...";
+      }, 800);
     }
-  }, 100);
+  }, 600);
 }
 
 // Function to get random number between min (included) and max (excluded):
@@ -128,4 +160,12 @@ function openMewGameModal(message) {
 // Restart Game
 function restartGame() {
   window.location.reload();
+}
+
+// Blink the scoreboard in red to indicate who scored the point that turn
+function blink(score) {
+  score.style.color = "red";
+  setTimeout(() => {
+    score.style.color = "";
+  }, 800);
 }
