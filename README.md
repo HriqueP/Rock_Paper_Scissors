@@ -9,8 +9,8 @@ In the main screen you can choose between three options to play Rock Paper or sc
   <img src="./assets/Example Image 2.png"/>
   <img src="./assets/Example Image 3.png"/>
   <img src="./assets/Example Image 4.png"/>
-  <img src="./assets/Example Image 5.png"/>
-  <img src="./assets/Example Image 6.png"/>
+  <img src="./assets/Example Image 5.png" width="300"/>
+  <img src="./assets/Example Image 6.png" width="300"/>
 </div>
 
 ### Technologies Used
