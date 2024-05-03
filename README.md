@@ -5,12 +5,12 @@ A game of Rock Paper Scissos.
 In the main screen you can choose between three options to play Rock Paper or scissors after selecting the desired option the computer will also select one at random. You win if your score is higher than your opponents alongside five turns.
 
 <div>
-  <img src="./assets/Exemple Image 1.png"/>
-  <img src="./assets/Exemple Image 2.png"/>
-  <img src="./assets/Exemple Image 3.png"/>
-  <img src="./assets/Exemple Image 4.png"/>
-  <img src="./assets/Exemple Image 5.png"/>
-  <img src="./assets/Exemple Image 1.png"/>
+  <img src="./assets/Example Image 1.png"/>
+  <img src="./assets/Example Image 2.png"/>
+  <img src="./assets/Example Image 3.png"/>
+  <img src="./assets/Example Image 4.png"/>
+  <img src="./assets/Example Image 5.png"/>
+  <img src="./assets/Example Image 6.png"/>
 </div>
 
 ### Technologies Used
